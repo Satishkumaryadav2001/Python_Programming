@@ -264,3 +264,41 @@ Hello            Smaasher|
 >>> print(x)
  Huge_benfitsstudy
 >>>
+>>> ### Logical Operator
+>>> >>> a=True
+>>> b=False
+>>> if not a:
+...     print("My name is a")
+... if not b:
+...     print("My name is b")
+...
+...
+My name is b
+>>> >>>
+>>> a=False
+>>> b=True
+>>> if not a:
+...     print("My name is a")
+... if not b:
+...     print("My name is b")
+...
+My name is a
+
+
+>>> age=15
+>>> income=20000
+>>> if age >=18 or income >=15000:
+...     print("eligible for the loan")
+... else:
+...     printf("Not eligible for thr loan")
+...
+eligible for the loan
+>>
+>>>>> age=17
+>>> income=200
+>>> if age >=18 or income >=15000:
+...     print("eligible for the loan")
+... else:
+...     print("Not eligible for thr loan")
+..
+Not eligible for thr loan
