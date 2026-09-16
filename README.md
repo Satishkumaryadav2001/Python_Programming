@@ -302,3 +302,23 @@ eligible for the loan
 ...     print("Not eligible for thr loan")
 ..
 Not eligible for thr loan
+
+### Identity Operator
+>>> x=10
+>>> y=10
+>>> print(x is y)
+True
+>>> z=x
+>>> print(z is x)
+True
+>>> print(id(x))
+140731971134872
+>>> print(id(y))
+140731971134872
+>>> print(id(z))
+140731971134872
+>>
+>>>>> str2="Hii"
+>>> str1="Hii"
+>>> print(str1 is str2)
+True
