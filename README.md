@@ -322,3 +322,14 @@ True
 >>> str1="Hii"
 >>> print(str1 is str2)
 True
+
+
+>>> list1=[10,20,30]
+>>> list2=[10,20,30]
+>>> print(list1 is list2)
+False
+>>> print(id(list1))
+1909917596160
+>>> print(id(list2))
+1909917596032
+>>>
