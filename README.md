@@ -365,4 +365,65 @@ enter your name:ravi
 ... else:
 ...     print("Access denied.you are not registered.");
 ...
-Access g
+Access granted.Welcome br
+
+>>> first_string='hello, World |'
+>>> print(first_string)
+hello, World |
+>>> first_string[1]
+'e'
+>>> first_string[2]
+'l'
+>>> first_string[3]
+'l'
+>>> first_string[3]="o"
+Traceback (most recent call last):
+  File "<python-input-16>", line 1, in <module>
+    first_string[3]="o"
+    ~~~~~~~~~~~~^^^
+TypeError: 'str' object does not support item assignment
+>>> first_string[1:4]
+'ell'
+>>> len(first_string)
+14
+>>> list1=[1,2,3,4,5]
+>>> list1[1]=50
+>>> print(list1)
+[1, 50, 3, 4, 5]
+>>> string1='Hello';
+>>> string2='World';
+>>> string=string1+string2;
+>>> print(string)
+HelloWorld
+>>> string=string1+''+string2;
+>>> print(string)
+HelloWorld
+>>> string=string1+' '+string2;
+>>> print(string)
+Hello World
+>>> string1='Hello';
+>>> string2=20
+>>> string=string1+' '+string2;
+Traceback (most recent call last):
+  File "<python-input-32>", line 1, in <module>
+    string=string1+' '+string2;
+           ~~~~~~~~~~~^~~~~~~~
+TypeError: can only concatenate str (not "int") to str
+>>> string2='20'
+>>> string=string1+' '+string2;
+>>> print(string)
+Hello 20
+>>> string2=str(20)
+>>> string=string1+' '+string2;
+>>> print(string)
+Hello 20
+>>> first='Varun';
+>>> last='Singla';
+>>> age=33
+>>> print('My First name is first & last name is last & age is age')
+My First name is frist & last name is last & age is age
+>>> print(f'My First name is first & last name is last & age is age')
+My First name is frist & last name is last & age is age
+>>> print(f'My First name is {first} & last name is {last} & age is {age}')
+My First name is Varun & last name is Singla & age is 33
+
