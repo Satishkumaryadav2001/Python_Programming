@@ -333,3 +333,36 @@ False
 >>> print(id(list2))
 1909917596032
 >>>
+
+>>> Membership Operator:-
+>>> >>> list1=[1,2,3,4,5]
+>>> 1 in list1
+True
+>>> 10 in list1
+False
+>>> 10 not in list1
+True
+
+>>> if name in reg_usr:
+...     print("Access granted.Welcome br");
+... else:
+...     print("Access denied.you are not registered.");
+...
+KeyboardInterrupt
+>>> reg_usr=["varun","ravi","amrit","nitin"]
+>>> name=input("enter your name:")
+enter your name:ram
+>>> if name in reg_usr:
+...     print("Access granted.Welcome br");
+... else:
+...     print("Access denied.you are not registered.");
+...
+Access denied.you are not registered.
+>>> name=input("enter your name:")
+enter your name:ravi
+>>> if name in reg_usr:
+...     print("Access granted.Welcome br");
+... else:
+...     print("Access denied.you are not registered.");
+...
+Access g
