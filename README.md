@@ -427,3 +427,38 @@ My First name is frist & last name is last & age is age
 >>> print(f'My First name is {first} & last name is {last} & age is {age}')
 My First name is Varun & last name is Singla & age is 33
 
+
+## String slicing....   
+
+
+>>> string="Gate Smashers".
+>>> print(string)
+Gate Smashers
+>>> substr1=string[5:10]
+>>> print(substr1)
+Smash
+>>> substr2=string[5:]
+>>> print(substr2)
+Smashers
+>>> substr3=string[:10]
+>>> print(substr3)
+Gate Smash
+>>> substr4=string[:]
+>>> print(substr4)
+Gate Smashers
+>>> substr5=string[-8:-3]
+>>> print(substr5)
+Smash
+>>> substr6=string[5::2]
+>>> print(substr6)
+Sahr
+>>> substr7=string[::-1]
+>>> print(substr7)
+srehsamS etaG
+>>> substr8=string[5:12]
+>>> print(substr8)
+Smasher
+>>> substr9=string[5:12].upper()
+>>> print(substr9)
+SMASHER
+>>
