@@ -462,3 +462,224 @@ Smasher
 >>> print(substr9)
 SMASHER
 >>
+
+
+##List Data Types.....
+
+>> list1=[20,55,"Hello World"]
+>>> print(list1)
+[20, 55, 'Hello World']
+>>> list1=[20,5.5,"Hello World"]
+>>> print(list1)
+[20, 5.5, 'Hello World']
+>>> list2=[['varun',1989],['Ravinder',1990],['Amrit',1991]]
+>>> print(list2)
+[['varun', 1989], ['Ravinder', 1990], ['Amrit', 1991]]
+>>> list1=[20,5.5,"Hello World"]
+>>> list[0]
+list[0]
+>>> list1[0]
+20
+>>> list1[2]
+'Hello World'
+>>> list1[5]
+Traceback (most recent call last):
+  File "<python-input-10>", line 1, in <module>
+    list1[5]
+    ~~~~~^^^
+IndexError: list index out of range
+>>> list1[-1]
+'Hello World'
+>>> list1[n-1]
+Traceback (most recent call last):
+  File "<python-input-12>", line 1, in <module>
+    list1[n-1]
+          ^
+NameError: name 'n' is not defined
+>>> list1[-n]
+Traceback (most recent call last):
+  File "<python-input-13>", line 1, in <module>
+    list1[-n]
+           ^
+NameError: name 'n' is not defined
+>>> list1[2]
+'Hello World'
+>>> list1[2]="Radhe Radhe"
+>>> print(list1)
+[20, 5.5, 'Radhe Radhe']
+
+## Concatenation.
+>>> list1=[1,3,5,7,9]
+>>> list2=[2,4,6,8,10]
+>>> list1+list2
+[1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
+>>> 
+>>> ## Repetion:-
+>>> list1=['Hello']
+>>> list1*5
+['Hello', 'Hello', 'Hello', 'Hello', 'Hello']
+>>> 
+>>## Membership
+>>> list1=['varun','ravinder','amrit']
+>>> 'Amrit' in list1
+False
+>>> 'amrit' in list1
+True
+>>> 'Nitin' in list1
+False
+
+
+## List Function
+
+>>> list1=[]10,20,30,40,50]
+  File "<python-input-0>", line 1
+    list1=[]10,20,30,40,50]
+                          ^
+SyntaxError: unmatched ']'
+>>> list1=[10,20,30,40,50]
+>>> lin(list1)
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    lin(list1)
+    ^^^
+NameError: name 'lin' is not defined. Did you mean: 'bin'?
+>>> len(list1)
+5
+>>> list1=list()
+>>> list1
+[]
+>>> str1='aeiou'
+>>> list1=list(str1)
+>>> list1
+['a', 'e', 'i', 'o', 'u']
+>>> list1=[10,20,30,40,50]
+>>> list1.append(50)
+>>> list1
+[10, 20, 30, 40, 50, 50]
+>>> list1.append(60)
+>>> list1
+[10, 20, 30, 40, 50, 50, 60]
+>>> list1.append([70,80],["RAM"])
+Traceback (most recent call last):
+  File "<python-input-14>", line 1, in <module>
+    list1.append([70,80],["RAM"])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: list.append() takes exactly one argument (2 given)
+>>> list1.append([70,80])
+>>> list1
+[10, 20, 30, 40, 50, 50, 60, [70, 80]]
+>>> list1=[10,20,30]
+>>> list2=[40,50]
+>>> list1.extend(list2)
+>>> list1
+[10, 20, 30, 40, 50]
+>>> list1.insert(2,35)
+>>> list1
+[10, 20, 35, 30, 40, 50]
+>>> list1.insert(0,5)
+>>> list1
+[5, 10, 20, 35, 30, 40, 50]
+>>> list1=[10,20,30,40,50,10,20,35,45,55]
+>>> list1.count(10)
+2
+>>> list1.count(0)
+0
+>>> list1.count(90)
+0
+>>> list1.index(20)
+1
+>>> list1.index(90)
+Traceback (most recent call last):
+  File "<python-input-30>", line 1, in <module>
+    list1.index(90)
+    ~~~~~~~~~~~^^^^
+ValueError: list.index(x): x not in list
+>>> list1.index(23)
+Traceback (most recent call last):
+  File "<python-input-31>", line 1, in <module>
+    list1.index(23)
+    ~~~~~~~~~~~^^^^
+ValueError: list.index(x): x not in list
+>>> list1.remove(20)
+>>> list1
+[10, 30, 40, 50, 10, 20, 35, 45, 55]
+>>> list1.remove(90)
+Traceback (most recent call last):
+  File "<python-input-34>", line 1, in <module>
+    list1.remove(90)
+    ~~~~~~~~~~~~^^^^
+ValueError: list.remove(x): x not in list
+>>> list1.pop(3)
+50
+>>> list1.pop(3)60
+  File "<python-input-36>", line 1
+    list1.pop(3)60
+                ^^
+SyntaxError: invalid syntax
+>>> list1.pop()60
+  File "<python-input-37>", line 1
+    list1.pop()60
+               ^^
+SyntaxError: invalid syntax
+>>> list1.pop()90
+  File "<python-input-38>", line 1
+    list1.pop()90
+               ^^
+SyntaxError: invalid syntax
+>>> list1.pop()45
+  File "<python-input-39>", line 1
+    list1.pop()45
+               ^^
+SyntaxError: invalid syntax
+>>> list1
+[10, 30, 40, 10, 20, 35, 45, 55]
+>>> list1.pop()30
+  File "<python-input-41>", line 1
+    list1.pop()30
+               ^^
+SyntaxError: invalid syntax
+>>> list1.pop() 30
+  File "<python-input-42>", line 1
+    list1.pop() 30
+                ^^
+SyntaxError: invalid syntax
+>>> list1.POP() 30
+  File "<python-input-43>", line 1
+    list1.POP() 30
+                ^^
+SyntaxError: invalid syntax
+>>> list1.reverse()
+>>> list1
+[55, 45, 35, 20, 10, 40, 30, 10]
+>>> list1.reverse()
+>>> list1
+[10, 30, 40, 10, 20, 35, 45, 55]
+>>> list1=['varun','ravinder','amrit']
+>>> list1.reverse()
+>>> list1
+['amrit', 'ravinder', 'varun']
+>>> list1.sort()
+>>> list1
+['amrit', 'ravinder', 'varun']
+>>> list1=[10,20,30,40,50,10,20,35,45,55]
+>>> list1.sort(reverse=true)
+Traceback (most recent call last):
+  File "<python-input-54>", line 1, in <module>
+    list1.sort(reverse=true)
+                       ^^^^
+NameError: name 'true' is not defined. Did you mean: 'True'?
+>>> list1.sorted(list1)
+Traceback (most recent call last):
+  File "<python-input-55>", line 1, in <module>
+    list1.sorted(list1)
+    ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'sorted'. Did you mean: 'sort'?
+>>> list1
+[10, 20, 30, 40, 50, 10, 20, 35, 45, 55]
+>>> min(list1)
+10
+>>> max(list1)
+55
+>>> sum(list1)
+315
+
