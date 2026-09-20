@@ -683,3 +683,18 @@ AttributeError: 'list' object has no attribute 'sorted'. Did you mean: 'sort'?
 >>> sum(list1)
 315
 
+## Dictionaries Data types
+
+>>> dict1={}
+>>> print(dict1)
+{}
+>>> print(dict1.get(1))
+None
+>>> dict1={1:'Varun',2:'Ravi',3:'Nitin'}
+>>> print(dict1)
+{1: 'Varun', 2: 'Ravi', 3: 'Nitin'}
+>>> print(dict1.get(1))
+Varun
+>>> print(dict1.get(3))
+Nitin
+>>>
