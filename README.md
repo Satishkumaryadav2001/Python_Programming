@@ -697,4 +697,149 @@ None
 Varun
 >>> print(dict1.get(3))
 Nitin
+
+## if else elif in Python
+
+>>> ##if statement
+>>> age=int(input("Enter Your age:"))
+Enter Your age:34
+>>> if age >18:
+...     print("You Can Apply for lincense")
+... print("Speed thrills but kills")
+...
+You Can Apply for lincense
+Speed thrills but kills
+>>> age=int(input("Enter Your age:"))
+Enter Your age:12
+>>> if age >18:
+...     print("You Can Apply for lincense")
+... print("Speed thrills but kills")
+...
+Speed thrills but kills
+>>> ## if..else statement
+>>> age = int(input("Enter your age:"))
+Enter your age:12
+>>> if age>18:
+...     print("You can apply for licence:")
+... else:
+...     print("Itani jaldi bhi kya hai")
+...
+...
+Itani jaldi bhi kya hai
+>>> 19
+19
+>>>
+>>> age = int(input("Enter your age:"))
+Enter your age:19
+>>> if age>18:
+...     print("You can apply for licence:")
+... else:
+...     print("Itani jaldi bhi kya hai")
+...
+You can apply for licence:
+>>> ## if ......elif ...else statement
+>>> 
+>>> handsome="true"
+>>> good_salary="true"
+>>> if handsome=="true" and good_salary=="true":
+...     print("you will marry with a super model")
+... elif handsome !="true" and good_salary =="true":
+...     print("you wiil marry with a beautiful girl")
+... elif handsome =="true" and good_salary == "true":
+...     print("We will marry with a girl")
+... else:
+...     print("Bhagwan Bharose!!")
+...
+you will marry with a super model
+>>> handsome="false"
+>>> if handsome=="true" and good_salary=="true":
+...     print("you will marry with a super model")
+... elif handsome !="true" and good_salary =="true":
+...     print("you wiil marry with a beautiful girl")
+... elif handsome =="true" and good_salary == "true":
+...     print("We will marry with a girl")
+... else:
+...     print("Bhagwan Bharose!!")
+...
+you wiil marry with a beautiful girl
+>>> handsome="true"
+>>> good_salary="false"
+>>> if handsome=="true" and good_salary=="true":
+...     print("you will marry with a super model")
+... elif handsome !="true" and good_salary =="true":
+...     print("you wiil marry with a beautiful girl")
+... elif handsome =="true" and good_salary == "true":
+...     print("We will marry with a girl")
+... else:
+...     print("Bhagwan Bharose!!")
+...
+Bhagwan Bharose!!
+>>> handsome="false"
+>>> good_salary="false"
+>>> if handsome=="true" and good_salary=="true":
+...     print("you will marry with a super model")
+... elif handsome !="true" and good_salary =="true":
+...     print("you wiil marry with a beautiful girl")
+... elif handsome =="true" and good_salary == "true":
+...     print("We will marry with a girl")
+... else:
+...     print("Bhagwan Bharose!!")
+...
+Bhagwan Bharose!!
+>>> ## Nested if
+>>> age=17
+>>> own_car="false"
+>>> #outer if statement
+>>> if (age >= 18):
+...     #inner if statement
+...     if(own_car=="true"):
+...         print("Drive your car")
+...         # inner else statement
+...     else:
+...         print("Work hard & Purchase a new car")
+... #outer else statement
+... else:
+...     print("Phale bade to ho jao")
+...
+Phale bade to ho jao
+>>> age=18
+>>> if (age >= 18):
+...     #inner if statement
+...     if(own_car=="true"):
+...         print("Drive your car")
+...         # inner else statement
+...     else:
+...         print("Work hard & Purchase a new car")
+... #outer else statement
+... else:
+...     print("Phale bade to ho jao")
+...
+Work hard & Purchase a new car
+>>> own_car="true"
+>>> age=18
+>>> if (age >= 18):
+...     #inner if statement
+...     if(own_car=="true"):
+...         print("Drive your car")
+...         # inner else statement
+...     else:
+...         print("Work hard & Purchase a new car")
+... #outer else statement
+... else:
+...     print("Phale bade to ho jao")
+...
+Drive your car
+>>> age=12
+>>> if (age >= 18):
+...     #inner if statement
+...     if(own_car=="true"):
+...         print("Drive your car")
+...         # inner else statement
+...     else:
+...         print("Work hard & Purchase a new car")
+... #outer else statement
+... else:
+...     print("Phale bade to ho jao")
+...
+Phale bade to ho jao
 >>>
