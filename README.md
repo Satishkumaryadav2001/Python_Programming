@@ -843,3 +843,56 @@ Drive your car
 ...
 Phale bade to ho jao
 >>>
+## Loop
+## For Loop
+>>> colors=["blue","black","green","gray"]
+>>> for i in colors:
+...     print(i)
+...
+blue
+black
+green
+gray
+>>>> for i in range(4):
+...     x=int(input("Please Enter a Number between 1 and 100:"))
+...     if 1<= x <=100:
+...         print("valid no",x)
+...     else:
+...         print("Invalid number. Try again.")
+...
+Please Enter a Number between 1 and 100:76
+valid no 76
+Please Enter a Number between 1 and 100:100
+valid no 100
+Please Enter a Number between 1 and 100:101
+Invalid number. Try again.
+Please Enter a Number between 1 and 100:0
+Invalid number. Try again.
+>>> 
+## While Lopp
+>>> i=1
+>>> while i<5:
+...     print(i)
+...     i+=1
+...
+1
+2
+3
+4
+
+
+>>> while not (1 <=x<= 100):
+...     x=int(input("Please enter a number between 1 and 100 :" ))
+... print("Valid no",x)
+...
+Valid no 65
+
+
+>>> while True:
+...     print(" The Value of i is ", i)
+...     i+=1
+...     if i>0:
+...         break
+>>> 
+...
+ The Value of i is  0
