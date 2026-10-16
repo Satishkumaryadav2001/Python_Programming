@@ -786,7 +786,9 @@ Bhagwan Bharose!!
 ...     print("Bhagwan Bharose!!")
 ...
 Bhagwan Bharose!!
->>> ## Nested if
+
+**Nested if**
+
 >>> age=17
 >>> own_car="false"
 >>> #outer if statement
@@ -843,8 +845,11 @@ Drive your car
 ...
 Phale bade to ho jao
 >>>
-## Loop
-## For Loop
+
+**Loop** 
+
+**For Loop**
+
 >>> colors=["blue","black","green","gray"]
 >>> for i in colors:
 ...     print(i)
@@ -868,8 +873,10 @@ Please Enter a Number between 1 and 100:101
 Invalid number. Try again.
 Please Enter a Number between 1 and 100:0
 Invalid number. Try again.
+>>>
 >>> 
-## While Lopp
+**While Lopp**
+
 >>> i=1
 >>> while i<5:
 ...     print(i)
@@ -896,3 +903,72 @@ Valid no 65
 >>> 
 ...
  The Value of i is  0
+
+
+**Break Statement**
+
+>>> list1=range(8)
+>>> for x in list1:
+...     if(x==4):
+...         break
+...     print(x)
+...
+0
+1
+2
+3
+
+>>> name=input()
+satish kumar
+>>> for x in name:
+...     if(x==' '):
+...         break
+...     print(x,end=' ')
+...
+...
+s a t i s h >>>
+
+
+>>> items=[1,2,3,4,5,6,7,8,9]
+>>> target=3
+>>>
+>>> for item in items:
+...     if item==target:
+...         print('Item found:',item)
+...         break
+...
+Item found: 3
+
+
+**Continue**
+>>> for x in list1:
+...     if(x==4):
+...         continue
+...     print(x)
+...
+0
+1
+2
+3
+5
+6
+7
+>>> name=input()
+satish kumar
+>>> for x in name:
+...     if(x==' '):
+...         continue
+...     print(x,end=' ')
+...
+s a t i s h k u m a r >>>
+
+
+
+
+
+>>> age=int(input())
+19
+>>> if age>18 and age <28:
+...     print("You are welcome")
+...
+You are welcome
