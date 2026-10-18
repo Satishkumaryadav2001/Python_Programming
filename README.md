@@ -972,3 +972,258 @@ s a t i s h k u m a r >>>
 ...     print("You are welcome")
 ...
 You are welcome
+
+
+**Introducation to NumPy**
+
+>>> import numpy as np
+>>> list1 = [10,20,30,40,50]
+>>> array1=np.array(list1)
+>>> print(array1)
+[10 20 30 40 50]
+>>> print(type(array1))
+<class 'numpy.ndarray'>
+>>> import numpy as np
+>>> array1=np.arange(1,8)
+>>> print(array1)
+[1 2 3 4 5 6 7]
+>>> print(type(array1))
+<class 'numpy.ndarray'>
+>>> import numpy as np
+>>> list1=[[10,20,30],[40,50,60],[70,80,90]]
+>>> array1=np.array(list1)
+>>> print(array1)
+[[10 20 30]
+ [40 50 60]
+ [70 80 90]]
+>>> array1=np.arange(11,17).reshape((2,3))
+>>> print(array1)
+[[11 12 13]
+ [14 15 16]]
+>>> array1=np.zeros(4)
+>>> print(array1)
+[0. 0. 0. 0.]
+>>> array1=np.zeros(4,2)
+
+
+>>> array1=np.ones(4)
+>>> print(array1)
+[1. 1. 1. 1.]
+
+
+**Attributes of NumPy Array**
+
+>>> import numpy as np
+>>> list1=[10,20,30,40,50]
+>>> array1=np.array(list1)
+>>> print(array1)
+[10 20 30 40 50]
+>>> array1.ndim
+1
+>>> array1.shape
+(5,)
+>>> >>> import numpy as np
+>>> list1=[[10,20],[30,40],[50,60]]
+>>> array1.ndim
+1
+>>> array1=np.array(list1)
+>>> array1.ndim
+2
+>>> array1.shape
+(3, 2)
+>>> list1=[[[10,20],[30,40],[50,60]]]
+>>> array1=np.array(list1)
+>>> array1.ndim
+3
+>>> array1.shape
+(1, 3, 2)
+
+
+
+**Indexing in NumPy Array**
+
+>>> import numpy as np
+>>> list1=[[10,20],[30,40],[50,60]]
+>>> array1.ndim
+1
+>>> array1=np.array(list1)
+>>> array1.ndim
+2
+>>> array1.shape
+(3, 2)
+>>> list1=[[[10,20],[30,40],[50,60]]]
+>>> array1=np.array(list1)
+>>> array1.ndim
+3
+>>> array1.shape
+(1, 3, 2)
+>>> import numpy as np
+>>> array1=np.array([10,20,30,40,50])
+>>> print(array1[0])
+10
+>>> print(array1[-1])
+50
+>>> array1=np.array([[10,20,25],[30,40,45],[50,60,65]])
+>>> print(array1[1,2])
+45
+>>> print(array1[0,])
+[10 20 25]
+>>> print(array1[0,:])
+[10 20 25]
+>>> print(array1[:,1])
+[20 40 60]
+
+
+**Slicing in Numpy Array**
+
+
+>>> array1=np.array([10,20,25,30,40,45,50,60,65])
+>>> >>> print(array1)
+[[10 20 25]
+ [30 40 45]
+ [50 60 65]]
+>>>
+>>> print(array1[1:3])
+[20 25]
+>>> print(array1[1:3:2])
+[20]
+>>> print(array1[-1:-3:-1])
+[65 60]
+>>> print(array1[::2])
+[10 25 40 50 65]
+>>> print(array1[::-1])
+[65 60 50 45 40 30 25 20 10]
+>>> import numpy as np
+>>> array1=np.array([[10,20,25],[30,40,45],[50,60,65]])
+>>> print(array1[1,])
+[30 40 45]
+>>> print(array1[:,1])
+[20 40 60]
+>>> print(array1[1:3,1:3])
+[[40 45]
+ [60 65]]
+>>> print(array1[:,1:3])
+[[20 25]
+ [40 45]
+ [60 65]]
+>>> print(array1[1:3,1])
+[40 60]
+>>> print(array1[1:3,:1])
+[[30]
+ [50]]
+
+
+**Arithematic Oprations On NumPy Arrays**
+
+
+>>> import numpy as np
+>>> x=np.array([[1,2],[3,4]])
+>>> y=np.array([[11,12],[13,14]])
+>>> z=x+y;
+>>> print(z)
+[[12 14]
+ [16 18]]
+>>> z=x-y;
+>>> print(z)
+[[-10 -10]
+ [-10 -10]]
+>>> z=x*y;
+>>> print(z)
+[[11 24]
+ [39 56]]
+>>> z=x/y
+>>> print(z)
+[[0.09090909 0.16666667]
+ [0.23076923 0.28571429]]
+>>> z=x%y
+>>> print(z)
+[[1 2]
+ [3 4]]
+>>> z=x//y
+>>> print(z)
+[[0 0]
+ [0 0]]
+>>> z=x**y
+>>> print(z)
+[[        1      4096]
+ [  1594323 268435456]]
+>>> z=x@y
+>>> print(z)
+[[37 40]
+ [85 92]]
+
+
+>>> print(z.transpose())
+[[37 85]
+ [40 92]]
+
+**Sorting In NumPy 2D Array**
+
+>>>import numpy as np
+>>>  x=np.array([[70,20,5],[70,50,5],[5,0,45]])
+>>> print(x)
+[[70 20  5]
+ [70 50  5]
+ [ 5  0 45]]
+>>> y=np.sort(x)
+>>> print(y)
+[[ 5 20 70]
+ [ 5 50 70]
+ [ 0  5 45]]
+>>> y=np.sort(x,axis=0)
+>>> print(y)
+[[ 5  0  5]
+ [70 20  5]
+ [70 50 45]]
+
+
+**Sorting In NumPy 1D Array**
+
+>>> x=np.array([70,20,5,70,50,5,5,0,45])
+>>> y=np.sort(x)
+>>> print(x)
+[70 20  5 70 50  5  5  0 45]
+>>> print(y)
+[ 0  5  5  5 20 45 50 70 70]
+>>> y=np.argsort(x)
+>>> print(y)
+[7 2 5 6 1 8 4 3 0]
+>>> x=np.array([70,20,5,70,50,5,5,0,45])
+>>> x.sort()
+>>> print(x)
+[ 0  5  5  5 20 45 50 70 70]
+
+
+**Statistical Operations on 1D Array**
+
+
+>>> import numpy as np
+>>> x=np.array([4,2,3,9,7])
+>>> y=np.max(x)
+>>> print(y)
+9
+>>> y=np.min(x)
+>>> print(y)
+2
+>>> y=np.sum(x)
+>>> print(y)
+25
+>>> y=np.mean(x)
+>>> print(y)
+5.0
+>>> y=np.median(x)
+>>> print(y)
+4.0
+>>> y=np.prod(x)
+>>> print(y)
+1512
+>>> y=np.var(x)
+>>> print(y)
+6.8
+>>> y=np.std(x)
+>>> print(y)
+2.6076809620810595
+
+
+
+****
