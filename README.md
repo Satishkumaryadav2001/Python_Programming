@@ -1285,3 +1285,66 @@ RangeIndex(start=0, stop=8, step=1)
 
 
 
+>>> import pandas as pd
+>>> df=pd.read_csv("C:/Users/Hp/Downloads/student.csv")
+>>> df
+     Student_id  Age  Gender      Grade Employed
+0             1   19    Male  1st Class      yes
+1             2   20  Female  2nd Class       no
+2             3   18    Male  1st Class       no
+3             4   21  Female  2nd Class       no
+4             5   19    Male  1st Class       no
+..          ...  ...     ...        ...      ...
+227         228   21  Female  1st Class       no
+228         229   20    Male  2nd Class       no
+229         230   20    Male  3rd Class      yes
+230         231   19  Female  1st Class      yes
+231         232   20    Male  3rd Class      yes
+
+[232 rows x 5 columns]
+>>> df['Age']
+0      19
+1      20
+2      18
+3      21
+4      19
+       ..
+227    21
+228    20
+229    20
+230    19
+231    20
+Name: Age, Length: 232, dtype: int64
+>>>
+>>> >>> df.loc[0]
+Student_id            1
+Age                  19
+Gender             Male
+Grade         1st Class
+Employed            yes
+Name: 0, dtype: object
+>>> df.loc[[0,2,4]]
+   Student_id  Age Gender      Grade Employed
+0           1   19   Male  1st Class      yes
+2           3   18   Male  1st Class       no
+4           5   19   Male  1st Class       no
+>>> df.iloc[0]
+Student_id            1
+Age                  19
+Gender             Male
+Grade         1st Class
+Employed            yes
+Name: 0, dtype: object
+>>> df.iloc[[0,2,4]]
+   Student_id  Age Gender      Grade Employed
+0           1   19   Male  1st Class      yes
+2           3   18   Male  1st Class       no
+4           5   19   Male  1st Class       no
+>>> df.iloc[[0,2,]]
+   Student_id  Age Gender      Grade Employed
+0           1   19   Male  1st Class      yes
+2           3   18   Male  1st Class       no
+>>> df.iloc[[0,2]]
+   Student_id  Age Gender      Grade Employed
+0           1   19   Male  1st Class      yes
+2           3   18   Male  1st Class       no
