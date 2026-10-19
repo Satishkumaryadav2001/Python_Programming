@@ -1348,3 +1348,195 @@ Name: 0, dtype: object
    Student_id  Age Gender      Grade Employed
 0           1   19   Male  1st Class      yes
 2           3   18   Male  1st Class       no
+>>
+>>>>> import pandas as pd
+...
+... # 1. Create sample student data
+... data = {
+...     'Student_ID': [101, 102, 103, 104, 105],
+...     'Name': ['Amit Sharma', 'Priya Patel', 'Rohan Das', 'Sana Khan', 'Aniket Verma'],
+...     'Age': [18, 19, 18, 20, 19],
+...     'Grade': ['1st Class', '2nd Class', '1st Class', '3rd Class', '2nd Class'],
+...     'Marks': [85, 72, 90, 55, 68]
+... }
+...
+... # 2. Convert to a Pandas DataFrame
+... df = pd.DataFrame(data)
+...
+... # 3. Save as a CSV file
+... df.to_csv('student.csv', index=False)
+... print("Successfully created 'student.csv'!")
+...
+Successfully created 'student.csv'!
+>>> df
+   Student_ID          Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>> cf=pd.read_csv('student.csv')
+>>> cf
+   Student_ID          Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>>>>
+>>>>> >>> cf['Age']
+0    18
+1    19
+2    18
+3    20
+4    19
+Name: Age, dtype: int64
+>>> cf=pd.read_csv('student.csv')
+>>> cf
+   Student_ID          Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>> cf['Age']
+0    18
+1    19
+2    18
+3    20
+4    19
+Name: Age, dtype: int64
+>>> cf[['Name','Age']]
+           Name  Age
+0   Amit Sharma   18
+1   Priya Patel   19
+2     Rohan Das   18
+3     Sana Khan   20
+4  Aniket Verma   19
+>>>
+>>>>>> cf[cf['Age']>29]
+Empty DataFrame
+Columns: [Student_ID, Name, Age, Grade, Marks]
+Index: []
+>>> cf
+   Student_ID          Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>> cf[cf['Age']>19]
+   Student_ID       Name  Age      Grade  Marks
+3         104  Sana Khan   20  3rd Class     55
+>>> cf['PH_No']=[10,20,30,40,50]
+>>> cf
+   Student_ID          Name  Age      Grade  Marks  PH_No
+0         101   Amit Sharma   18  1st Class     85     10
+1         102   Priya Patel   19  2nd Class     72     20
+2         103     Rohan Das   18  1st Class     90     30
+3         104     Sana Khan   20  3rd Class     55     40
+4         105  Aniket Verma   19  2nd Class     68     5
+>>>
+>>>>>> cf=cf.drop(columns=['PH_No'])
+>>> cf
+   Student_ID          Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>> cf=cf.rename(columns={'Name':'Std_Name'})
+>>> cf
+   Student_ID      Std_Name  Age      Grade  Marks
+0         101   Amit Sharma   18  1st Class     85
+1         102   Priya Patel   19  2nd Class     72
+2         103     Rohan Das   18  1st Class     90
+3         104     Sana Khan   20  3rd Class     55
+4         105  Aniket Verma   19  2nd Class     68
+>>> cf=cf.rename(columns={'Age':'Std_Age'})
+>>> cf
+   Student_ID      Std_Name  Std_Age      Grade  Marks
+0         101   Amit Sharma       18  1st Class     85
+1         102   Priya Patel       19  2nd Class     72
+2         103     Rohan Das       18  1st Class     90
+3         104     Sana Khan       20  3rd Class     55
+4         105  Aniket Verma       19  2nd Class     68
+>>>
+>>>>>> cf['PH_No']=[10,20,30,40,50]
+>>> cf
+   Student_ID      Std_Name  Std_Age      Grade  Marks  PH_No
+0         101   Amit Sharma       18  1st Class     85     10
+1         102   Priya Patel       19  2nd Class     72     20
+2         103     Rohan Das       18  1st Class     90     30
+3         104     Sana Khan       20  3rd Class     55     40
+4         105  Aniket Verma       19  2nd Class     68     50
+>>> del cf['PH_No']
+>>> cf
+   Student_ID      Std_Name  Std_Age      Grade  Marks
+0         101   Amit Sharma       18  1st Class     85
+1         102   Priya Patel       19  2nd Class     72
+2         103     Rohan Das       18  1st Class     90
+3         104     Sana Khan       20  3rd Class     55
+4         105  Aniket Verma       19  2nd Class     68
+>>> cf.loc[4]=[5,'pinki',28,'1st Class',86]
+>>> cf
+   Student_ID     Std_Name  Std_Age      Grade  Marks
+0         101  Amit Sharma       18  1st Class     85
+1         102  Priya Patel       19  2nd Class     72
+2         103    Rohan Das       18  1st Class     90
+3         104    Sana Khan       20  3rd Class     55
+4           5        pinki       28  1st Class     86
+>>> cf.loc[4]=[105,'pinki',28,'1st Class',86]
+>>> cf
+   Student_ID     Std_Name  Std_Age      Grade  Marks
+0         101  Amit Sharma       18  1st Class     85
+1         102  Priya Patel       19  2nd Class     72
+2         103    Rohan Das       18  1st Class     90
+3         104    Sana Khan       20  3rd Class     55
+4         105        pinki       28  1st Class     86
+>>> cf.loc[102,'Std_age']=20
+>>> cf
+     Student_ID     Std_Name  Std_Age      Grade  Marks  Std_age
+0         101.0  Amit Sharma     18.0  1st Class   85.0      NaN
+1         102.0  Priya Patel     19.0  2nd Class   72.0      NaN
+2         103.0    Rohan Das     18.0  1st Class   90.0      NaN
+3         104.0    Sana Khan     20.0  3rd Class   55.0      NaN
+4         105.0        pinki     28.0  1st Class   86.0      NaN
+102         NaN          NaN      NaN        NaN    NaN     20.0
+>>>
+>>>>>> cf
+     Student_ID     Std_Name  Std_Age      Grade  Marks  Std_age
+0         101.0  Amit Sharma     18.0  1st Class   85.0      NaN
+1         102.0  Priya Patel     19.0  2nd Class   72.0      NaN
+2         103.0    Rohan Das     18.0  1st Class   90.0      NaN
+3         104.0    Sana Khan     20.0  3rd Class   55.0      NaN
+4         105.0        pinki     28.0  1st Class   86.0      NaN
+102         NaN          NaN      NaN        NaN    NaN     20.0
+>>> del cf['Std_age']
+>>> cf
+     Student_ID     Std_Name  Std_Age      Grade  Marks
+0         101.0  Amit Sharma     18.0  1st Class   85.0
+1         102.0  Priya Patel     19.0  2nd Class   72.0
+2         103.0    Rohan Das     18.0  1st Class   90.0
+3         104.0    Sana Khan     20.0  3rd Class   55.0
+4         105.0        pinki     28.0  1st Class   86.0
+102         NaN          NaN      NaN        NaN    NaN
+>>> cf.loc[4]=[106,'Ishani',28,'1st Class',86]
+>>> cf
+     Student_ID     Std_Name  Std_Age      Grade  Marks
+0         101.0  Amit Sharma     18.0  1st Class   85.0
+1         102.0  Priya Patel     19.0  2nd Class   72.0
+2         103.0    Rohan Das     18.0  1st Class   90.0
+3         104.0    Sana Khan     20.0  3rd Class   55.0
+4         106.0       Ishani     28.0  1st Class   86.0
+102         NaN          NaN      NaN        NaN    NaN
+>>>
+>>>>>> cf=cf.drop
+>>> cf
+<bound method DataFrame.drop of      Student_ID     Std_Name  Std_Age      Grade  Marks
+0         101.0  Amit Sharma     18.0  1st Class   85.0
+1         102.0  Priya Patel     19.0  2nd Class   72.0
+2         103.0    Rohan Das     18.0  1st Class   90.0
+3         104.0    Sana Khan     20.0  3rd Class   55.0
+4         106.0       Ishani     28.0  1st Class   86.0
+102         NaN          NaN      NaN        NaN    NaN>
