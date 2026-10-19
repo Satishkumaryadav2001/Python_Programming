@@ -1226,4 +1226,62 @@ You are welcome
 
 
 
-****
+**How To Create Data Frame In Pandas**
+
+>>> import pandas as pd
+>>> std_data=[(1,'Varun',30,'male','CG'),(2,'Satish',25,'male','UP'),(3,'Pankaj',16,'male','Delhi'),(4,'Satayam',18,'ma\
+le','HR'),(5,'Shubham',16,'male','PB'),(6,'Pappu',22,'male','CH'),(7,'Surendra',30,'male','MP'),(8,'Virendra',31,'male'\
+,'JH')]
+>>>
+>>> >>> df=pd.DataFrame(std_data,columns=['std_id','name','age','gender','address'])
+>>> df
+   std_id      name  age gender address
+0       1     Varun   30   male      CG
+1       2    Satish   25   male      UP
+2       3    Pankaj   16   male   Delhi
+3       4   Satayam   18   male      HR
+4       5   Shubham   16   male      PB
+5       6     Pappu   22   male      CH
+6       7  Surendra   30   male      MP
+7       8  Virendra   31   male      JH
+>>> df.tail()
+   std_id      name  age gender address
+3       4   Satayam   18   male      HR
+4       5   Shubham   16   male      PB
+5       6     Pappu   22   male      CH
+6       7  Surendra   30   male      MP
+7       8  Virendra   31   male      JH
+>>> df.head()
+   std_id     name  age gender address
+0       1    Varun   30   male      CG
+1       2   Satish   25   male      UP
+2       3   Pankaj   16   male   Delhi
+3       4  Satayam   18   male      HR
+4       5  Shubham   16   male      PB
+>>> df.shape
+(8, 5)
+>>> df.columns
+Index(['std_id', 'name', 'age', 'gender', 'address'], dtype='str')
+>>> df.size
+40
+>>> df.dtypes
+std_id     int64
+name         str
+age        int64
+gender       str
+address      str
+dtype: object
+>>> df.values
+array([[1, 'Varun', 30, 'male', 'CG'],
+       [2, 'Satish', 25, 'male', 'UP'],
+       [3, 'Pankaj', 16, 'male', 'Delhi'],
+       [4, 'Satayam', 18, 'male', 'HR'],
+       [5, 'Shubham', 16, 'male', 'PB'],
+       [6, 'Pappu', 22, 'male', 'CH'],
+       [7, 'Surendra', 30, 'male', 'MP'],
+       [8, 'Virendra', 31, 'male', 'JH']], dtype=object)
+>>> df.index
+RangeIndex(start=0, stop=8, step=1)
+
+
+
