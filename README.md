@@ -1581,4 +1581,55 @@ Satish
 Enter a number:8
 The squre of 8.0 is 64.0
 
+**File Handling In Python**
+
+>>> f1=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f1.read()
+'Python Practice File Handling \nConcepts\n\nRadhe Radhe\n'
+
+>>> f1=open('C:/Users/Hp/Desktop/Python_Practice.txt','a')
+>>> f1.write("  So Practice it daily")
+22
+>>> f1.close()
+>>>
+>>> >>> f1=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f1.read()
+'Python is important for interviews So Practice it daily'
+
+
+>>> f1=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f1.read(5)
+'Pytho'
+>>> f1.read(5)
+'n is '
+>>> >>> f1.tell()#file Pointer
+10
+>>> f1.seek(0)#Zero postions
+0
+>>> f1.tell()#file Pointer
+0
+>>> f1.seek(15)#Zero postions
+15
+>>> f1.tell()#file Pointer
+15
+>>> f1.read(5)
+'tant '
+>>> 
+>>> >>> f1.seek(0)
+0
+>>> for line in f1:
+...     print(line)
+...
+Python is important for interviews So Practice it daily.
+
+JavaScript is important for interviews So Practice it daily.
+
+Java is important for interviews So Practice it daily
+
+>>> f1=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f1.readline(200)
+'Python is important for interviews So Practice it daily.\n'
+>>> f1.readlines()
+['JavaScript is important for interviews So Practice it daily.\n', 'Java is important for interviews So Practice it daily']
+
 
