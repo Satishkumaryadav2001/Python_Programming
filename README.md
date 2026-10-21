@@ -1540,3 +1540,45 @@ Index: []
 3         104.0    Sana Khan     20.0  3rd Class   55.0
 4         106.0       Ishani     28.0  1st Class   86.0
 102         NaN          NaN      NaN        NaN    NaN>
+
+**Function**
+
+>>> def function_name(parameters):
+...     """
+...     Docstring- brief description of the fuction.
+...     """
+...     #function Body- statements that define what the functon does.
+...     #the body can contain one or more statements.
+...     return value
+...
+>>>
+
+>>> >>> def f1():
+...     print("Hello")
+... f1()
+...
+Hello
+
+
+>>> def f1():
+...     print("Hello")
+...     f1()
+... def f2(name):
+...     print(name)
+... f2('Satish')
+...
+Satish
+
+>>> def square(x):
+...     """
+...     This function takes a number as input and returns it square.
+...     """
+...     return x**2
+... x=float(input("Enter a number:"))# Get user input for a number
+... out=square(x) # Calculate the square using the function
+... print("The squre of",x,"is",out) #Print the result
+...
+Enter a number:8
+The squre of 8.0 is 64.0
+
+
