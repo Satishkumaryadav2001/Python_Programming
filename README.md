@@ -1633,3 +1633,61 @@ Java is important for interviews So Practice it daily
 ['JavaScript is important for interviews So Practice it daily.\n', 'Java is important for interviews So Practice it daily']
 
 
+
+
+**read() ,readline() & readlines in Python** 
+
+
+>>> f=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f.read()
+'Python is important for interviews So Practice it daily.\nJavaScript is important for interviews So Practice it daily.\nJava is important for interviews So Practice it daily'
+>>> print(f.read())
+
+>>> f=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> print(f.read())
+Python is important for interviews So Practice it daily.
+JavaScript is important for interviews So Practice it daily.
+Java is important for interviews So Practice it daily
+>>> f=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f.read(5)
+'Pytho'
+>>> f.read(5)
+'n is '
+>>> f.read(5)
+'impor'
+>>> f.tell()
+15
+>>> f.seek(0)
+0
+>>> f.tell()
+0
+>>> f.seek(15)
+15
+>>> f.tell()
+15
+>>> f.read(5)
+'tant '
+>>> f.seek(0)
+0
+>>> for line in f:
+...     print(line)
+...
+Python is important for interviews So Practice it daily.
+
+JavaScript is important for interviews So Practice it daily.
+
+Java is important for interviews So Practice it daily
+>>> f=open('C:/Users/Hp/Desktop/Python_Practice.txt')
+>>> f.readline()
+'Python is important for interviews So Practice it daily.\n'
+>>> f.readline()
+'JavaScript is important for interviews So Practice it daily.\n'
+>>> f.readlines()
+['Java is important for interviews So Practice it daily']
+>>> f.seek(0)
+0
+>>> f.readlines()
+['Python is important for interviews So Practice it daily.\n', 'JavaScript is important for interviews So Practice it daily.\n', 'Java is important for interviews So Practice it daily']
+
+
+**Scoping in Python**
