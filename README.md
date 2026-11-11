@@ -1690,4 +1690,30 @@ Java is important for interviews So Practice it daily
 ['Python is important for interviews So Practice it daily.\n', 'JavaScript is important for interviews So Practice it daily.\n', 'Java is important for interviews So Practice it daily']
 
 
-**Scoping in Python**
+**Scoping & Lifetime**
+
+>>> glob='Hi I am GLOBALLY available'
+>>> def f1():
+...     """
+...     Testing Scope & lifetime of a variable
+...     """
+...     local = " Hi i am locally available"
+...     print(local)
+...     print(glob)
+...
+...
+>>> f1()
+ Hi i am locally available
+Hi I am GLOBALLY available
+>>> print(glob)
+Hi I am GLOBALLY available
+>>> print(local)
+Traceback (most recent call last):
+  File "<python-input-7>", line 1, in <module>
+    print(local)
+          ^^^^^
+NameError: name 'local' is not defined. Did you mean: 'locals'?
+
+
+
+
