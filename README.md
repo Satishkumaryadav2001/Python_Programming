@@ -1740,3 +1740,65 @@ NameError: name 'local' is not defined. Did you mean: 'locals'?
 ...
 Sorted array is: [10, 20, 30, 40]
 >>> 
+
+
+
+  **Selection Sort**
+
+  >>> def selection(arr1):
+...     n=len(arr1)
+...     for i in range(n-1):
+...         mini=i
+...         for j in range(i+1,n):
+...             if arr1[j]<arr1[mini]:
+...                 mini=j
+...                 arr1[i],arr1[mini]=arr1[mini],arr1[i]
+...
+...
+... arr1=[24,41,33,42,17]
+... selection(arr1)
+... print("Sorted array is:",arr1)
+...
+Sorted array is: [17, 24, 33, 41, 42]
+>  
+>
+>
+
+
+  **Bubble Sort**
+
+  >>> def bubble(arr1):
+...     n=len(arr1)
+...     for i in range(n):
+...         swapped=False
+...         for j in range(0,n-i-1):
+...             if arr1[j]>arr1[j+1]:
+...                 arr1[j],arr1[j+1]=arr1[j+1],arr1[j]
+...                 swapped=True
+...         if not swapped:
+...             break
+... arr1=[10,20,30,40,50]
+... bubble(arr1)
+... print("Sorted array is:",arr1)
+...
+Sorted array is: [10, 20, 30, 40, 50]
+>>> def bubble(arr1):
+...     n=len(arr1)
+...     for i in range(n):
+...         swapped=False
+...         for j in range(0,n-i-1):
+...             if arr1[j]>arr1[j+1]:
+...                 arr1[j],arr1[j+1]=arr1[j+1],arr1[j]
+...                 swapped=True
+...         if not swapped:
+...             break
+... arr1=[1,20,3,40,5]
+... bubble(arr1)
+... print("Sorted array is:",arr1)
+...
+Sorted array is: [1, 3, 5, 20, 40]
+>  
+>
+>
+
+**Quick Sort**
