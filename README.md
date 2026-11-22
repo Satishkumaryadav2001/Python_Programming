@@ -1801,4 +1801,76 @@ Sorted array is: [1, 3, 5, 20, 40]
 >
 >
 
-**Quick Sort**
+**Quick Sort** ( Excute code)
+
+def quick_sort(arr, low, high):
+    if low < high:
+        pivot = partition(arr, low, high)
+        quick_sort(arr, low, pivot)  # For Hoare scheme, pivot element is included in the left half
+        quick_sort(arr, pivot + 1, high)
+
+def partition(arr, low, high):
+    p = arr[low]  # Choosing the first element as the pivot
+    i = low - 1   
+    j = high + 1  
+    
+    while True:
+        # Move i right while element is less than pivot
+        i += 1
+        while arr[i] < p:
+            i += 1
+            
+        # Move j left while element is greater than pivot
+        j -= 1
+        while arr[j] > p:
+            j -= 1
+            
+        # If pointers cross or meet, return the split index
+        if i >= j:
+            return j
+            
+        # Swap out-of-place elements
+        arr[i], arr[j] = arr[j], arr[i]
+
+# Driver code to test the implementation
+if __name__ == "__main__":
+    test_arr = [5, 8, 1, 2, 6, 3, 9]
+    print("Original Array:", test_arr)
+    quick_sort(test_arr, 0, len(test_arr) - 1)
+    print("Sorted Array:  ", test_arr)
+
+
+
+
+  **Merge Sort**
+
+
+  def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    l_half = arr[:mid]
+    r_half = arr[mid:]
+    l_half = merge_sort(l_half)
+    r_half = merge_sort(r_half)
+    return merge(l_half, r_half)
+
+def merge(left, right):
+    new = []
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            new.append(left[i])
+            i += 1
+        else:
+            new.append(right[j])
+            j += 1  # FIXED: Changed =+1 to +=1
+    new.extend(left[i:])
+    new.extend(right[j:])
+    return new
+
+# Test the code
+if __name__ == "__main__":
+    test_arr = [5, 8, 1, 2, 6, 3, 9]
+    print("Sorted Array:", merge_sort(test_arr))
+
