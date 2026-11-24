@@ -1874,3 +1874,63 @@ if __name__ == "__main__":
     test_arr = [5, 8, 1, 2, 6, 3, 9]
     print("Sorted Array:", merge_sort(test_arr))
 
+
+
+**Classes & Object in Python**
+
+
+
+
+>>> class employee:
+...     def putdata(self):
+...         self.id=int(input("enter employee id : "))
+...         self.name=input("enter employee name : ")
+...
+...         self.salary=float(input("Enter employee salary : "))
+...     def display(self):
+...         print("Employee id:",self.id)
+...         print("Employee name:",self.name)
+...         print("Employee Salary:",self.salary)
+... a=employee()
+... a.putdata()
+... a.display()
+...
+enter employee id : 101
+enter employee name : Satish kumar
+Enter employee salary : 2500000
+Employee id: 101
+Employee name: Satish kumar
+Employee Salary: 2500000.0
+
+
+
+>>> class first:
+...    x=50
+... obj=first()
+... print(obj.x)
+...
+50
+
+
+
+>>> class student:
+...    def __init__(self,my_roll,my_name,my_marks):
+...       self.rollno=my_roll
+...       self.name=my_name
+...       self.marks=my_marks
+...
+...    def average(self):
+...       return sum(self.marks)/len(self.marks)
+...
+... first_student=student(1,'Varun',[50,60,70,80,90])
+... print(first_student.name)
+... print(first_student.average())
+...
+Varun
+70.0
+
+**Constructors In Python**
+
+
+
+
