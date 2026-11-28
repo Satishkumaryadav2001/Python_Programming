@@ -1931,6 +1931,134 @@ Varun
 
 **Constructors In Python**
 
+ class faculty:  #method1
+...     def putdata(self):
+...         self.id=int(input("enter faculty id : "))
+...         self.name=input("enter name : ")
+...
+...         self.salary=float(input("Enter faculty salary : "))
+...     def display(self):
+...         print("Faculty  id:",self.id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty()
+... a.putdata()
+... a.display()
+...
+enter faculty id : 25
+enter name : Ram
+Enter faculty salary : 225555
+Faculty  id: 25
+Faculty name: Ram
+Faculty Salary: 225555.0
+>>> class faculty:  #method1
+...     def putdata(self):
+...         self.id=int(input("enter faculty id : "))
+...         self.name=input("enter name : ")
+...
+...         self.salary=float(input("Enter faculty salary : "))
+...     def display(self):
+...         print("Faculty  id:",self.id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty()
+... ##a.putdata()
+... a.display()
+...
+Traceback (most recent call last):
+  File "<python-input-3>", line 13, in <module>
+    a.display()
+    ~~~~~~~~~^^
+  File "<python-input-3>", line 8, in display
+    print("Faculty  id:",self.id)
+                         ^^^^^^^
+AttributeError: 'faculty' object has no attribute 'id'
+>>> class faculty:  #method1
+...     def __init__(self):
+...         self.id=int(input("enter faculty id : "))
+...         self.name=input("enter name : ")
+...
+...         self.salary=float(input("Enter faculty salary : "))
+...     def display(self):
+...         print("Faculty  id:",self.id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty()
+... ##a.putdata()
+... a.display()
+...
+enter faculty id : 54
+enter name : Shayam
+Enter faculty salary : 5425
+Faculty  id: 54
+Faculty name: Shayam
+Faculty Salary: 5425.0
+>>> class faculty:  #method1
+...     def __init__(self):
+...         self.id=int(input("enter faculty id : "))
+...         self.name=input("enter name : ")
+...
+...         self.salary=float(input("Enter faculty salary : "))
+...     def display(self):
+...         print("Faculty  id:",self.id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty()
+... b=faculty()
+... a.display()
+... b.display()
+...
+enter faculty id : 1
+enter name : Raja
+Enter faculty salary : 54820000
+enter faculty id : 2
+enter name : Rani
+Enter faculty salary : 25454000
+Faculty  id: 1
+Faculty name: Raja
+Faculty Salary: 54820000.0
+Faculty  id: 2
+Faculty name: Rani
+Faculty Salary: 25454000.0
+>>> class faculty:  #method1
+...     def __init__(self,a,b,c):
+...         self.f_id=a
+...         self.name=b
+...         self.salary=c
+...     def display(self):
+...         print("Faculty  id:",self.id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty(1,"Satish",30000)
+... a.display()
+...
+Traceback (most recent call last):
+  File "<python-input-6>", line 11, in <module>
+    a.display()
+    ~~~~~~~~~^^
+  File "<python-input-6>", line 7, in display
+    print("Faculty  id:",self.id)
+                         ^^^^^^^
+AttributeError: 'faculty' object has no attribute 'id'
+>>> class faculty:  #method1
+...     def __init__(self,a,b,c):
+...         self.f_id=a
+...         self.name=b
+...         self.salary=c
+...     def display(self):
+...         print("Faculty  id:",self.f_id)
+...         print("Faculty name:",self.name)
+...         print("Faculty Salary:",self.salary)
+... a=faculty(1,"Satish",30000)
+... a.display()
+...
+Faculty  id: 1
+Faculty name: Satish
+Faculty Salary: 30000
+
+
+**Inheritance In Python**
+
 
 
 
